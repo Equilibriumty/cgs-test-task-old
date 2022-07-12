@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://root:test@cluster0.rxq7s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "papich",
+  "jwtExpiration": 360000
+}

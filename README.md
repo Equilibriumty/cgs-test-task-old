@@ -16,10 +16,12 @@
 Avoid Upper case! Do not use `N_Surname` syntax or `Implement-Crud-Todo` syntax
 
 If you keep experiencing something like: **tslint: command not found**
-please do the following: 
+please do the following:
+
 ```
 yarn global add tslint typescript
 ```
+
 link: https://stackoverflow.com/questions/36910592/enabling-eslint-on-typescript-files/64175035#64175035
 
 ## Time-frames
@@ -30,13 +32,13 @@ Time-frames of the test task is highly important! You have only 2 weeks for the 
 
 1. **Todo list - CRUD operations on backend**;
 
-- _Each `PUT` `POST` rout should has validation of `req.body` and throw `400` error in case of failed validation_  
+- _Each `PUT` `POST` rout should has validation of `req.body` and throw `400` error in case of failed validation_
 - _Separate your logic from routes. You should perform all interactions with `DB` inside your `services/<filename>.service.ts` file and import it to `controllers/<filename>.controller.ts`. After that you can call your controllers in routes_
 
 2. **Todo list - Connect your CRUD operations with mobile**;
 
-- _You should split your code on logical components ( `<TodoContainer />`, `<TodoElement/>` etc);_  
-- _For Edit/Add you should use forms written with [Formik](https://formik.org/docs/overview);_  
+- _You should split your code on logical components ( `<TodoContainer />`, `<TodoElement/>` etc);_
+- _For Edit/Add you should use forms written with [Formik](https://formik.org/docs/overview);_
 - _Put logic related to server interactions inside `service/http.ts` file (check [Our Documentation](https://github.com/CodeGeneration-2020/code-generation-code-style/blob/main/docs/javascript.md#server-interactions-))_
 - _For data fetching you can use [React Query](https://react-query.tanstack.com/), it also help you to globally store your data_
 - _Use `<FlatList />` for render dynamic list (reed RN docs: https://reactnative.dev/docs/flatlist)_
@@ -64,22 +66,23 @@ Time-frames of the test task is highly important! You have only 2 weeks for the 
 
 > This features will be available only after successful finished of required features.
 
-### Graph QL implementation  
+### Graph QL implementation
 
-1. **Attach express-graphql to backend**  
+1. **Attach express-graphql to backend**
 
 - _Take existent controllers in your backend and create another `/graphql` route with all this controllers_
-- _Use axios for querying a controllers_  
-- _Graphql api should work in parallel with existing REST api_  
+- _Use axios for querying a controllers_
+- _Graphql api should work in parallel with existing REST api_
 
-### NOTES  
+### NOTES
 
 > Backend should have stored in `server` dir, mobile should be stored in `mobile` dir.  
 > Use technologies from `Useful links and technologies`. You should create separate pr for each task.
 
-Design: [drive.google](https://drive.google.com/file/d/1uSkWwYC7yrvgDFJznxNlKPqQl_SahGzZ/view)  
+Design: [drive.google](https://drive.google.com/file/d/1uSkWwYC7yrvgDFJznxNlKPqQl_SahGzZ/view)
 
 7. **React Native details;**
+
 - _Front-end should ONLY be launched with React Native EXPO, not (CLI)_
 - _For navigation between screens use React Native Navigation (https://reactnavigation.org/docs/getting-started/)_
 - _Try to play around with bottom stack navigation, while working with navigation (https://reactnavigation.org/docs/bottom-tab-navigator)_
@@ -93,7 +96,7 @@ Design: [drive.google](https://drive.google.com/file/d/1uSkWwYC7yrvgDFJznxNlKPqQ
 
 1. Each intern will be attached to a branch (`<name that you have set in pre-requirements>/main`);
 2. When you are working on a feature you should create a separate branch from `<name that you have set in pre-requirements>/main` with the following name:
-`feature/<name that you have set in pre-requirements>/<feature-name>` or `bug/<name that you have set in pre-requirements>/<feature-name>`. Once you are done with a subtask you should create a PR into `<name that you have set in pre-requirements>/main` and ping `Danyyl Kuchkov & Oleksii Samoilenko` for review;
+   `feature/<name that you have set in pre-requirements>/<feature-name>` or `bug/<name that you have set in pre-requirements>/<feature-name>`. Once you are done with a subtask you should create a PR into `<name that you have set in pre-requirements>/main` and ping `Danyyl Kuchkov & Oleksii Samoilenko` for review;
 3. Title of ypur PR's should be `feat: <name of your feature>` or `bug-fix: <name of your bugfix>`. Description field should contain short info about feature/bug;
 4. PR's are under review ONLY between 9AM - 9:30AM (Kyiv EET time)
 

@@ -1,6 +1,6 @@
-import { Response, Request } from 'express';
-import UserService from '../services/user.service';
-import AuthService from '../services/auth.service';
+import { Response, Request } from "express";
+import UserService from "../services/user.service";
+import AuthService from "../services/auth.service";
 
 export class UserController {
   constructor(
@@ -12,7 +12,7 @@ export class UserController {
     const { body } = req;
     const user = await this.userService.checkUserByEmail(body);
     if (user) {
-      return res.status(409).json({ message: 'This email is already used' });
+      return res.status(409).json({ message: "This email is already used" });
     }
     const newPassword = this.authService.setPassword(body.password);
     const newUser = await this.userService.userRegistration({
@@ -27,7 +27,7 @@ export class UserController {
     const { body } = req;
     const user = await this.userService.checkUserByEmail(body);
     if (!user) {
-      res.status(401).json({ message: 'User with such email dont exist' });
+      res.status(401).json({ message: "User with such email dont exist" });
       return;
     }
     const isPasswordValid = this.authService.checkPassword(

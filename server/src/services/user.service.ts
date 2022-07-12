@@ -1,5 +1,5 @@
-import { IDataForToken } from '../types/user.type';
-import User from '../models/User';
+import { IDataForToken } from "../types/user.type";
+import User from "../models/User";
 
 export default class UserService {
   async userRegistration(data: IDataForToken) {

@@ -25,7 +25,7 @@ const EditInputs: React.FC<IEditInputs> = ({ todo }) => {
       validationSchema={todoValidationScheme}
       onSubmit={(values) => todoApi.editTodo(values, todo._id)}
     >
-      {({ values, handleChange, handleSubmit, setFieldValue, errors }) =>
+      {({ values, handleChange, handleSubmit, setFieldValue, errors }) => (
         <SharedInputs
           values={values}
           handleChange={handleChange}
@@ -33,7 +33,7 @@ const EditInputs: React.FC<IEditInputs> = ({ todo }) => {
           setFieldValue={setFieldValue}
           errors={errors}
         />
-      }
+      )}
     </Formik>
   );
 };

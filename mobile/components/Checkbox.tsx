@@ -16,14 +16,10 @@ interface IMyCheckboxProps {
 
 const MyCheckbox: React.FC<IMyCheckboxProps> = (props) => {
   return (
-    <View
-      style={globalStyles.centeredRow}
-    >
+    <View style={globalStyles.centeredRow}>
       <Text>{props.title}</Text>
       <CheckBox
-        onValueChange={() =>
-          props.setFieldValue
-        }
+        onValueChange={() => props.setFieldValue}
         value={props.values.isPublic}
       />
     </View>

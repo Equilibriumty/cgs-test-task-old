@@ -26,7 +26,6 @@ const Login: React.FC = () => {
       await AsyncStorage.setItem('token', response.data.token);
       login();
     },
-
   });
 
   return (
@@ -47,14 +46,14 @@ const Login: React.FC = () => {
           <View>
             <InputWithLabel
               error={errors.email}
-              label='Email'
+              label="Email"
               value={values.email}
               onChangeText={handleChange('email')}
             />
 
             <InputWithLabel
               error={errors.password}
-              label='Password'
+              label="Password"
               value={values.password}
               onChangeText={handleChange('password')}
             />

@@ -8,8 +8,6 @@ import { theme } from './theme/theme';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import AuthProvider, { AuthContext } from './context/AuthContext';
 
-
-
 // const isAuth = true; // it's temporary
 
 export default function App() {
@@ -18,7 +16,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <Provider theme={theme}>
-          <RootStackScreens/>
+          <RootStackScreens />
         </Provider>
       </AuthProvider>
     </QueryClientProvider>

@@ -14,23 +14,23 @@ const SharedInputs = ({
   return (
     <View>
       <InputWithLabel
-        label='Title of todo'
-        mode='outlined'
+        label="Title of todo"
+        mode="outlined"
         value={values?.title}
         onChangeText={handleChange('title')}
         error={errors.title}
       />
       <InputWithLabel
-        label='description'
-        mode='outlined'
+        label="description"
+        mode="outlined"
         value={values?.description}
         onChangeText={handleChange('description')}
         error={errors.description}
       />
 
       <InputWithLabel
-        label='year'
-        mode='outlined'
+        label="year"
+        mode="outlined"
         value={values?.year?.toString()}
         onChangeText={handleChange('year')}
         error={errors.year}

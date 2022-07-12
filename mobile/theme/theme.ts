@@ -60,4 +60,3 @@ export const theme = {
     accent: colors.accent,
   },
 };
-

@@ -7,7 +7,6 @@ interface WelcomeProps {
   navigation: any;
 }
 
-
 const Welcome = ({ navigation }) => {
   return (
     <SafeAreaView style={globalStyles.androidSafeArea}>

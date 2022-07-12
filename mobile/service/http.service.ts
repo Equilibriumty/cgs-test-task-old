@@ -15,7 +15,7 @@ export class HttpService {
   }
 
   authAxios = axios.create({
-    headers: { 'token': async () => await AsyncStorage.getItem('token') },
+    headers: { token: async () => await AsyncStorage.getItem('token') },
   });
 
   private getFullApiUrl(specificApiRoute: string) {
@@ -24,13 +24,13 @@ export class HttpService {
 
   async get(apiVersion: string): Promise<ITodo[]> {
     const res = await this.fetchingServiceWithHeaders.get(
-      this.getFullApiUrl(apiVersion)
+      this.getFullApiUrl(apiVersion),
     );
     return res.data;
   }
   async getOneTodo(apiVersion: string, id: string) {
     const res = await this.fetchingServiceWithHeaders.get(
-      this.getFullApiUrl(apiVersion) + `/${id}`
+      this.getFullApiUrl(apiVersion) + `/${id}`,
     );
     return res.data;
   }
@@ -40,7 +40,7 @@ export class HttpService {
 
     const res = await this.fetchingServiceWithHeaders.post(
       this.getFullApiUrl(apiVersion),
-      data
+      data,
     );
     return res.data;
   }
@@ -48,14 +48,14 @@ export class HttpService {
   async put(data: Partial<ItoDoWithoutId>, id: string, apiVersion: string) {
     const res = await this.fetchingServiceWithHeaders.put(
       this.getFullApiUrl(apiVersion) + `/${id}`,
-      data
+      data,
     );
     return res.data;
   }
 
   async delete(id: string, apiVersion: string) {
     const res = await this.fetchingServiceWithHeaders.delete(
-      this.getFullApiUrl(apiVersion) + `/${id}`
+      this.getFullApiUrl(apiVersion) + `/${id}`,
     );
     return res.data;
   }
@@ -63,13 +63,13 @@ export class HttpService {
   async login(apiVersion: string, user: IUser) {
     return await this.fetchingServiceWithHeaders.post(
       this.getFullApiUrl(apiVersion),
-      user
+      user,
     );
   }
   async register(apiVersion: string, user: IUser) {
     return await this.fetchingServiceWithHeaders.post(
       this.getFullApiUrl(apiVersion),
-      user
+      user,
     );
   }
 }

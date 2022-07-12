@@ -9,7 +9,6 @@ interface IEditTodoModal {
   todo: ITodo;
 }
 
-
 const EditTodoModal: React.FC<IEditTodoModal> = ({ todo }) => {
   const [visible, setVisible] = useState<boolean>(false);
   const showModal = () => setVisible(true);

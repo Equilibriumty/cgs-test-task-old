@@ -6,15 +6,14 @@ import { validUserScheme } from "../../types/user.type";
 const router: Router = Router();
 
 router.post(
-  '/register',
+  "/register",
   schemaValidationMiddleware(validUserScheme),
   userController.userRegistration.bind(userController)
 );
 router.post(
-  '/login',
+  "/login",
   schemaValidationMiddleware(validUserScheme),
   userController.userLogin.bind(userController)
 );
-
 
 export default router;

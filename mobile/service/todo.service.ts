@@ -17,7 +17,7 @@ class TodoService extends HttpService {
     return this.post(data, '/todos/createTodo');
   }
 
-  editTodo(data: Partial<ItoDoWithoutId>, id: string ) {
+  editTodo(data: Partial<ItoDoWithoutId>, id: string) {
     return this.put(data, id, '/todos/editTodo');
   }
 

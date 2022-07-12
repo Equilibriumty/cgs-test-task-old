@@ -17,7 +17,7 @@ const AddInputs = () => {
       validationSchema={todoValidationScheme}
       onSubmit={(values) => todoApi.createTodo(values)}
     >
-      {({ values, handleChange, handleSubmit, setFieldValue, errors }) =>
+      {({ values, handleChange, handleSubmit, setFieldValue, errors }) => (
         <SharedInputs
           values={values}
           handleChange={handleChange}
@@ -25,7 +25,7 @@ const AddInputs = () => {
           setFieldValue={setFieldValue}
           errors={errors}
         />
-      }
+      )}
     </Formik>
   );
 };

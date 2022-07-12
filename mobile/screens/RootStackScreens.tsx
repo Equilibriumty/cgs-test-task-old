@@ -26,17 +26,17 @@ const RootStackScreens = () => {
     return (
       <RootStack.Navigator>
         <RootStack.Screen
-          name='Welcome'
+          name="Welcome"
           component={Welcome}
           options={{ headerShown: false }}
         ></RootStack.Screen>
         <RootStack.Screen
-          name='Login'
+          name="Login"
           component={Login}
           options={{ headerShown: false }}
         ></RootStack.Screen>
         <RootStack.Screen
-          name='Register'
+          name="Register"
           component={Register}
           options={{ headerShown: false }}
         ></RootStack.Screen>
@@ -48,7 +48,7 @@ const RootStackScreens = () => {
     return (
       <RootStack.Navigator>
         <RootStack.Screen
-          name='Main'
+          name="Main"
           component={Main}
           options={{ headerShown: false }}
         ></RootStack.Screen>
